@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
-    <style>
+
+     <style>
       * {
         margin: 0;
         padding: 0;
@@ -136,7 +137,46 @@
         border-radius: 5px;
         font-size: 14px;
       }
+
+      @media only screen and (max-width: 800px) {
+        body {
+          padding: 30px 5px;
+          height: 100%;
+        }
+        .payment-container {
+          max-width: 80%;
+        }
+
+        .payment-content {
+          flex-direction: column;
+        }
+        .order-summary {
+          width: 90%;
+          margin: 20px auto;
+        }
+        .payment-methods {
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .payment-icons img {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+
+      @media only screen and (max-width: 800px) {
+        .payment-container {
+          max-width: 100%;
+        }
+
+        .order-summary,
+        .payment-icons img {
+          max-width: 100%;
+        }
+      }
     </style>
+    
   </head>
   <body>
     <div class="payment-container">
