@@ -5,10 +5,9 @@ from django_apscheduler.jobstores import DjangoJobStore
 from django_apscheduler.models import DjangoJobExecution
 from django_apscheduler import util
 from django.conf import settings
+from pytz import timezone
 
-
-
-
+ist_timezone = timezone('Asia/Kolkata')
 
 def send_document(document_path=None):
     # Get the full path of db.sqlite3
@@ -45,10 +44,11 @@ def start():
     scheduler.add_jobstore(DjangoJobStore(), "default")
     scheduler.add_job(
         backup_every_minute,
-        "interval",
-        hours=6,
+       "cron",
+        hour=17, minute=10,  # 8 PM daily
+        timezone=ist_timezone,
         jobstore="default",
-        id="backup_every_five_seconds",
+        id="backup_daily_8pm",
         replace_existing=True,
     )
     scheduler.add_job(
