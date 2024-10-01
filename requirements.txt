@@ -1,6 +1,6 @@
-Django==4.1.13
-django-apscheduler==0.6.2
-django-ckeditor==6.7.1
-whitenoise==6.7.0
+Django
+django-apscheduler
+django-ckeditor
+whitenoise
 requests
 gunicorn
