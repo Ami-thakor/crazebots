@@ -121,16 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-# STATIC_URL = 'static/'
-
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 # manually added
 SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"
-
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# WhiteNoise configuration for serving static files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
