@@ -1,0 +1,114 @@
+{% extends "base.html" %} {% block title %}{{blog_post.title}}
+{% endblock title %} {% block content %} {% include "navbar.html" %}
+<style>
+  .container {
+    max-width: 1162px;
+    margin: 10px auto;
+    margin-top:100px;
+    padding: 20px;
+    background-color: #192436;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+    color: #999;
+  }
+
+  .blog-content {
+    margin-top: 30px;
+  }
+
+  .featured-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .content-body {
+    line-height: 1.8;
+  }
+
+  .tags {
+    margin-top: 30px;
+    font-size: 1rem;
+  }
+
+  .tags ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tags ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  .tags ul li a {
+    color: #1b57b8;
+    text-decoration: none;
+  }
+
+  .tags ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .back-to-blog {
+    margin-top: 50px;
+  }
+
+  .btn {
+    padding: 5px;
+  }
+  .footer{
+    margin-top:50px;
+  }
+</style>
+
+<div class="container">
+  <!-- Blog Header -->
+  <header class="blog-header">
+    <h1>{{ blog_post.title }}</h1>
+    <div class="meta">
+      <span>By {{ blog_post.author.username }}</span> |
+      <span>Published on {{ blog_post.published_at|date:"F j, Y" }}</span>
+      {% if blog_post.category %} | <span>{{ blog_post.category.name }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- Blog Post Content -->
+  <div class="blog-content">
+    {% if blog_post.thumb %}
+    <img
+      src="{{ blog_post.thumb }}"
+      alt="Blog Post Image"
+      class="featured-image"
+    />
+    {% endif %}
+    <div class="content-body">{{ blog_post.content|safe }}</div>
+  </div>
+
+  <!-- Tags Section -->
+  {% if blog_post.tags.all %}
+  <div class="tags">
+    <span>Tags:</span>
+    <ul>
+      {% for tag in blog_post.tags.all %}
+      <li>{{ tag.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <!-- Back to Blog -->
+  <div class="back-to-blog">
+    <a href="/" class="btn">← Back to Blog</a>
+  </div>
+</div>
+{% include "footer.html" %} {% endblock content %}

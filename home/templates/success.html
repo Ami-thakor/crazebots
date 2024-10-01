@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+
+.success-icon .circle {
+    background-color: #32cd32;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.checkmark {
+    font-size: 40px;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.payment-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.payment-details h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.payment-details p {
+    font-size: 14px;
+    color: #1e1d1d;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.continue-button{
+    background-color: #000000;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.continue-button:hover {
+    background-color: #555;
+}
+
+.continue-button a{
+ color: rgb(80, 252, 0);
+ text-decoration: none;
+}
+
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">
+            <div class="circle">
+                <i class="checkmark">✔</i>
+            </div>
+        </div>
+
+        <h1>Payment Successful</h1>
+
+        <div class="payment-details">
+            <h3>Order Details</h3>
+            <p><strong>UserID:</strong> {{user_id}}</p>
+            <p><strong>Plan Name:</strong> {{plan.name}}</p>
+            <p><strong>Amount:</strong> ${{plan.price}}</p>
+            <p><strong>TransactionID:</strong> {{Transaction_ID}}</p>
+        </div>
+
+        <span>Please Take Screenshot of this Payment Details and send it to Us by clicking below button!</span>
+
+        <button class="continue-button"><a href="https://t.me/rahul_thakor">Activate Subscription Now</a></button>
+    </div>
+</body>
+</html>

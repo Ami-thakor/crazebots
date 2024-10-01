@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% load static %} {% block title %}CrazeBots -
+Pricing{%endblock title %} {% block content %}
+    <div class="wrap-body">
+      <div class="top-section">
+        <!-- Header -->
+      {% include "navbar.html" %}
+      </div>
+      <section class="pricing-section">
+        <div class="pricing-header">
+          <h2>Pricing plans</h2>
+          <p>
+            Try our basic plan risk-free for 30 days. Upgrade plan any
+            time.
+          </p>
+          <div class="toggle-buttons">
+            <button class="btn">Monthly pricing</button>
+          </div>
+        </div>
+
+        <div class="pricing-cards">
+
+{% for plan in plans %}
+          <div class="card box-shadow">
+            <h3>{{plan.name}} plan</h3>
+            <p>{{plan.description}}</p>
+            <p>1 credit = 1 image.</p>
+            <div class="price">${{plan.price}}<span>/ per month</span></div>
+            <button onclick="checkOut('{{plan.name}}');" class="btn">Select Plan</button>
+          </div>
+          {% endfor %}
+
+
+          
+        </div>
+
+        <div class="pricing-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Basic plan</th>
+                <th>Standard plan</th>
+                <th>Unlimited plan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enhance Photo</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+              </tr>
+              <tr>
+                <td>Monthly Credits</td>
+                <td>50</td>
+                <td>150</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Parallel process</td>
+                <td>&#10006;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+              </tr>
+
+              <tr>
+                <td>UltraHD Quality</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+              </tr>
+              <tr>
+                <td>No Time Gap</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+              </tr>
+
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+     {% include "footer.html" %}
+    </div>
+
+    <script src="{% static "js/pay.js" %}"></script>
+  {% comment %} </body>
+</html> {% endcomment %}
+
+
+{% endblock %}

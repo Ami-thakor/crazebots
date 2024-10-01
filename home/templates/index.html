@@ -1,0 +1,319 @@
+{% extends "base.html" %} 
+{% block title %}CrazeBots - Ultimate solutions for automation!{% endblock title %}
+
+
+    <div class="wrap-body">
+      <div class="top-section">
+        <!-- Header -->
+        
+        <header class="header xgradient-border">
+          <a href="#" class="brand">Craze<span>Bot</span>s.</a>
+          <nav id="navbar" class="navbar">
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+            <div class="gradient-button">
+              <a href="#" class="btn">Hire Me</a>
+            </div>
+          </nav>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <img id="menu" src="imgs/menu.svg" alt="menu">
+            <img id="cross" class="hidden" src="imgs/cross.svg" alt="menu">
+          </div>
+          
+          
+          
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section gradient-border ">
+          <div class="hero-content pattern">
+            <h1 class="hero-heading">
+              Building <span>Bots That</span> Connect, <br />
+              Engage, and Delight
+            </h1>
+            <p>
+              I specialize in developing custom Telegram bots that seamlessly
+              connect with your audience, enhance engagement, and create
+              delightful user experiences. Let’s turn your ideas into
+              interactive solutions.
+            </p>
+            <a href="#" class="btn">Get Started</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- My Experience -->
+      <section id="experience" class="experience-section">
+        <h2 class="section-title">My <span>Experience</span></h2>
+
+        <div class="experience-content">
+          <div class="experience-item box-shadow">
+            <h3>160</h3>
+            <p>Happy Clients</p>
+          </div>
+
+          <div class="experience-item box-shadow">
+            <h3>500</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="experience-item box-shadow">
+            <h3>500</h3>
+            <p>Projects Completed</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Projects -->
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-content">
+          <div class="project-item box-shadow">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300x150"
+                alt="Image Enhancer Bot"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Image Enhancer Bot</h3>
+                <p class="card-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="card-bottom">
+                  <a class="button" href="#">Demo ➔</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-item box-shadow">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300x150"
+                alt="Image Enhancer Bot"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Image Enhancer Bot</h3>
+                <p class="card-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="card-bottom">
+                  <a class="button" href="#">Demo ➔</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-item box-shadow">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300x150"
+                alt="Image Enhancer Bot"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Image Enhancer Bot</h3>
+                <p class="card-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="card-bottom">
+                  <a class="button" href="#">Demo ➔</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Services -->
+      <section id="services" class="services-section">
+        <div class="services-section-bg">
+          <h2 class="section-title">My <span>Services</span></h2>
+          <div class="services-content">
+            <div class="service-item box-shadow">
+              <img src="../imgs/web.png" alt="" />
+              <div class="service-content">
+                <h3>Web Development</h3>
+                <p>
+                  In testimonial section of building building a basic portfolio
+                  website using.
+                </p>
+              </div>
+            </div>
+            <div class="service-item box-shadow">
+              <img src="imgs/web.png" alt="" />
+              <div class="service-content">
+                <h3>Web Development</h3>
+                <p>
+                  In testimonial section of building building a basic portfolio
+                  website using.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Skills -->
+      <section id="skills" class="skills-section">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-content">
+          <div class="skill-item box-shadow">
+            <img src="../imgs/django.png" alt="" />
+            <p>Python</p>
+          </div>
+          <div class="skill-item box-shadow">
+            <img src="imgs/django.png" alt="" />
+            <p>Python</p>
+          </div>
+          <div class="skill-item box-shadow">
+            <img src="imgs/django.png" alt="" />
+            <p>Python</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- People Says -->
+      <section id="testimonials" class="testimonials-section">
+        <h2 class="section-title">People <span>Says</span></h2>
+        <div class="testimonials-content">
+          <div class="testimonial-item box-shadow">
+            <img src="../imgs/client.png" alt="" />
+            <div class="review-content">
+              <p>
+                In our Portfolio section, we are having images of previous work
+                and content. For Creating images we have img tag.
+              </p>
+              <h4>Jhon Snow</h4>
+            </div>
+          </div>
+          <div class="testimonial-item box-shadow">
+            <img src="imgs/client.png" alt="" />
+            <div class="review-content">
+              <p>
+                In our Portfolio section, we are having images of previous work
+                and content. For Creating images we have img tag.
+              </p>
+              <h4>Jhon Snow</h4>
+            </div>
+          </div>
+          <div class="testimonial-item box-shadow">
+            <img src="imgs/client.png" alt="" />
+            <div class="review-content">
+              <p>
+                In our Portfolio section, we are having images of previous work
+                and content. For Creating images we have img tag.
+              </p>
+              <h4>Jhon Snow</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- recent blogs  -->
+      <section id="blog" class="blog-section">
+        <h2 class="section-title">Recent <span>Blogs</span></h2>
+        <div class="blog-items">
+          <div class="blog-item box-shadow">
+            <img src="../imgs/blog.png" alt="" />
+            <div class="blog-info">
+              <p>Telegram</p>
+              <h3>Ecommerce Website Using HTML CSS And Bootstrap</h3>
+              <p>by <span>John Doe</span> - July 31, 2021</p>
+            </div>
+          </div>
+          <div class="blog-item box-shadow">
+            <img src="imgs/blog.png" alt="" />
+            <div class="blog-info">
+              <p>Telegram</p>
+              <h3>Ecommerce Website Using HTML CSS And Bootstrap</h3>
+              <p>by <span>John Doe</span> - July 31, 2021</p>
+            </div>
+          </div>
+          <div class="blog-item box-shadow">
+            <img src="imgs/blog.png" alt="" />
+            <div class="blog-info">
+              <p>Telegram</p>
+              <h3>Ecommerce Website Using HTML CSS And Bootstrap</h3>
+              <p>by <span>John Doe</span> - July 31, 2021</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Me (No Contact Form) -->
+      <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-top">
+              <div class="contact-icon">
+                <img src="../imgs/addresss.png" alt="" />
+              </div>
+              <h5>ADDRESS</h5>
+            </div>
+            <div class="contact-bottom">
+              <p>Weifield Group Contracting</p>
+              <p>6950 S. Jordan Road Centennial, CO 80112 Navi Mumbai, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-top">
+              <div class="contact-icon">
+                <img src="imgs/addresss.png" alt="" />
+              </div>
+              <h5>ADDRESS</h5>
+            </div>
+            <div class="contact-bottom">
+              <p>Weifield Group Contracting</p>
+              <p>6950 S. Jordan Road Centennial, CO 80112 Navi Mumbai, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-top">
+              <div class="contact-icon">
+                <img src="imgs/addresss.png" alt="" />
+              </div>
+              <h5>ADDRESS</h5>
+            </div>
+            <div class="contact-bottom">
+              <p>Weifield Group Contracting</p>
+              <p>6950 S. Jordan Road Centennial, CO 80112 Navi Mumbai, India</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-wrap">
+          <div class="footer-top">
+            <h3><span>CrazeBots</span> ltd.</h3>
+            <p>
+              In this tutorial we are going to design these three section with
+              the help of their sub sections. Sub sections are created as per
+              the website content. In this tutorial we are going to design these
+              three section with the help of their sub sections. Sub sections
+              are created as per the website content.
+            </p>
+           
+          </div>
+          <div class="footer-bottom">
+            <h3>© 2024 - CrazeBots.com</h3>
+            <div class="footer-menu">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Projects</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms and conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+   
